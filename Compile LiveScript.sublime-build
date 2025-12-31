@@ -1,0 +1,10 @@
+{
+	"shell_cmd": "lsc -c \"${file}\"",
+	"selector": "source.livescript",
+	"variants": [
+		{
+			"name": "Run",
+			"shell_cmd": "lsc \"${file}\""
+		}
+	]
+}

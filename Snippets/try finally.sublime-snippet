@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+try
+	${1:...}
+finally
+	${2:...}
+]]></content>
+	<tabTrigger>try finally</tabTrigger>
+	<scope>source.livescript</scope>
+</snippet>

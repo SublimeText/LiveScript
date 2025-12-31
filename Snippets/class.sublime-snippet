@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+class ${1:ClassName}
+	${0:...}
+]]></content>
+	<tabTrigger>class</tabTrigger>
+	<scope>source.livescript</scope>
+</snippet>

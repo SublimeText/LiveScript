@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+${1:...} if ${2:condition}
+]]></content>
+	<tabTrigger>if short</tabTrigger>
+	<scope>source.livescript</scope>
+</snippet>
