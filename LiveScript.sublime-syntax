@@ -383,7 +383,7 @@ contexts:
     - match: (?:const|let|var){{break}}
       scope: keyword.declaration.variable.livescript
     # import
-    - match: require{{break}}
+    - match: (?<!\.)require{{break}}
       scope: keyword.control.import.livescript
     - match: export{{break}}
       scope: keyword.control.export.livescript
@@ -394,59 +394,59 @@ contexts:
       scope: keyword.control.conditional.case.livescript
     - match: =>
       scope: keyword.control.conditional.then.livescript
-    - match: case{{break}}
+    - match: (?<!\.)case{{break}}
       scope: keyword.control.conditional.case.livescript
     - match: default{{break}}
       scope: keyword.control.conditional.default.livescript
-    - match: else{{break}}
+    - match: (?<!\.)else{{break}}
       scope: keyword.control.conditional.else.livescript
-    - match: ever{{break}}
+    - match: (?<!\.)ever{{break}}
       scope: keyword.control.conditional.ever.livescript
-    - match: if{{break}}
+    - match: (?<!\.)if{{break}}
       scope: keyword.control.conditional.if.livescript
-    - match: match{{break}}
+    - match: (?<!\.)match{{break}}
       scope: keyword.control.conditional.match.livescript
-    - match: switch{{break}}
+    - match: (?<!\.)switch{{break}}
       scope: keyword.control.conditional.switch.livescript
-    - match: then{{break}}
+    - match: (?<!\.)then{{break}}
       scope: keyword.control.conditional.then.livescript
-    - match: unless{{break}}
+    - match: (?<!\.)unless{{break}}
       scope: keyword.control.conditional.unless.livescript
-    - match: when{{break}}
+    - match: (?<!\.)when{{break}}
       scope: keyword.control.conditional.when.livescript
-    - match: where{{break}}
+    - match: (?<!\.)where{{break}}
       scope: keyword.control.conditional.where.livescript
     # exceptions
-    - match: catch{{break}}
+    - match: (?<!\.)catch{{break}}
       scope: keyword.control.exception.catch.livescript
-    - match: finally{{break}}
+    - match: (?<!\.)finally{{break}}
       scope: keyword.control.exception.finally.livescript
-    - match: try{{break}}
+    - match: (?<!\.)try{{break}}
       scope: keyword.control.exception.try.livescript
     # loop
-    - match: for{{break}}
+    - match: (?<!\.)for{{break}}
       scope: keyword.control.loop.for.livescript
       push: for-args
-    - match: loop{{break}}
+    - match: (?<!\.)loop{{break}}
       scope: keyword.control.loop.loop.livescript
-    - match: until{{break}}
+    - match: (?<!\.)until{{break}}
       scope: keyword.control.loop.until.livescript
-    - match: while{{break}}
+    - match: (?<!\.)while{{break}}
       scope: keyword.control.loop.while.livescript
     # flow
-    - match: await{{break}}
+    - match: (?<!\.)await{{break}}
       scope: keyword.control.flow.await.livescript
-    - match: break{{break}}
+    - match: (?<!\.)break{{break}}
       scope: keyword.control.flow.break.livescript
-    - match: continue{{break}}
+    - match: (?<!\.)continue{{break}}
       scope: keyword.control.flow.continue.livescript
-    - match: do{{break}}
+    - match: (?<!\.)do{{break}}
       scope: keyword.control.flow.do.livescript
-    - match: return{{break}}
+    - match: (?<!\.)return{{break}}
       scope: keyword.control.flow.return.livescript
     - match: throw{{break}}
       scope: keyword.control.flow.throw.livescript
-    - match: yield(?:\s+from)?{{break}}
+    - match: (?<!\.)yield(?:\s+from)?{{break}}
       scope: keyword.control.flow.yield.livescript
     # other
     - match: (?:debugger|with){{break}}
@@ -489,10 +489,10 @@ contexts:
     - match: import( all)?{{break}}
       scope: keyword.operator.word.livescript keyword.operator.assignment.augmented.livescript
     # relational operators
-    - match: (?:in|is(?:nt| not)?|of){{break}}
+    - match: (?<!\.)(?:in|is(?:nt| not)?|of){{break}}
       scope: keyword.operator.word.livescript keyword.operator.comparison.livescript
     # logical operators
-    - match: (?:and|or|not|xor)\b
+    - match: (?<!\.)(?:and|or|not|xor)\b
       scope: keyword.operator.word.livescript keyword.operator.logical.livescript
 
     ## symbolic operators
@@ -531,6 +531,8 @@ contexts:
       scope: keyword.operator.logical.livescript
     # variadic/spread operators
     - match: \.{3}
+      scope: keyword.operator.variadic.livescript
+    - match: \.{2}
       scope: keyword.operator.variadic.livescript
     # separators
     - match: \.(?:\[\]|\{\})?
