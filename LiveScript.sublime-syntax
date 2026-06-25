@@ -535,7 +535,14 @@ contexts:
     # separators
     - match: \.(?:\[\]|\{\})?
       scope: punctuation.accessor.dot.livescript
+      push: maybe-member
     - include: comma-separators
+
+  maybe-member:
+    - match: '{{identifier}}'
+      scope: variable.other.livescript
+      pop: 1
+    - include: else-pop
 
   comma-separators:
     - match: ','

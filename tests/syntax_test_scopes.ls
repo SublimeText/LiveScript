@@ -433,7 +433,7 @@
 #^^^^^^^^^^^^^^^^ meta.function.parameters.livescript
 #   ^^^^^^ variable.parameter.livescript
 #         ^ punctuation.accessor.dot.livescript
-#          ^^^^^^ variable.parameter.livescript
+#          ^^^^^^ variable.other.livescript
   ) -> person
 #^^ meta.function.parameters.livescript
 # ^ punctuation.section.parameters.end.livescript
@@ -1351,6 +1351,15 @@ x.arr.1.y #=> 9
 #     ^ meta.number.integer.decimal.livescript constant.numeric.value.livescript
 #      ^ punctuation.accessor.dot.livescript
 #       ^ variable.other.livescript
+
+foo.if or foo.and
+#^^ variable.other.livescript
+#  ^ punctuation.accessor.dot.livescript
+#   ^^ variable.other.livescript
+#      ^^ keyword.operator.word.livescript keyword.operator.logical.livescript
+#         ^^^ variable.other.livescript
+#            ^ punctuation.accessor.dot.livescript
+#             ^^^ variable.other.livescript
 
 ###[ LISTS ]###################################################################
 
