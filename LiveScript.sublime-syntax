@@ -530,7 +530,7 @@ contexts:
     - match: '!|\|\||&&'
       scope: keyword.operator.logical.livescript
     # variadic/spread operators
-    - match: \.{3}
+    - match: \.{2,3}
       scope: keyword.operator.variadic.livescript
     # separators
     - match: \.(?:\[\]|\{\})?

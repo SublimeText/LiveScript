@@ -1219,6 +1219,8 @@ switch day
   -~-~ = rhs
 # ^^^^ keyword.operator.arithmetic.livescript
 
+  ..
+# ^^ keyword.operator.variadic.livescript
   ...
 # ^^^ keyword.operator.variadic.livescript
 
